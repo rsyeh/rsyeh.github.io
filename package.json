@@ -5,15 +5,16 @@
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.0.17"
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.17",
+    "redux-mastermind": "^3.0.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "tape ./test/index.js | tap-spec",
     "eject": "react-scripts eject",
-    "flow": "flow",
-    "test": "tape ./test/index.js | tap-spec"
+    "flow": "flow"
   },
   "devDependencies": {
     "flow-bin": "^0.61.0",
