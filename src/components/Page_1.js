@@ -1,6 +1,7 @@
 // @flow
 
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import mastermind from './../mastermind'
 
 const actions = {
@@ -19,14 +20,14 @@ class Page_1 extends Component {
   }
 
   componentWillUnmount() {
-    mastermind.removeFeed(this)
+    mastermind.removeFeed(this.id)
   }
 
   render() {
-    console.log(mastermind.getState())
     return (
       <div>
         <h1> Page 1 </h1>
+        <Link to='/2'> Page 2 </Link>
         <button onClick={() => mastermind.update('genericStoreUpdate', { actions: {
           addTestData: {
             location: ['data', 'randomNumber'],
