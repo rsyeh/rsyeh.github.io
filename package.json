@@ -12,9 +12,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "flow": "flow"
+    "flow": "flow",
+    "test": "tape ./test/index.js | tap-spec"
   },
   "devDependencies": {
-    "flow-bin": "^0.61.0"
+    "flow-bin": "^0.61.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.8.0"
   }
 }
