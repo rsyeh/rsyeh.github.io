@@ -1,13 +1,21 @@
 
-import React from 'react';
-import { BrowserRouter, Link, Route, Redirect } from 'react-router-dom'
-import { Page_1, Page_2 } from './components';
+import React,{ Component } from 'react';
+import { BrowserRouter, Link, Route } from 'react-router-dom'
+import { LoginPage, HomePage } from './components/pages'
+import { TopNav } from './components/globalParts'
+import mastermind from './mastermind'
+import { Provider } from 'react-redux'
+import { PrivateRoute } from './components/routes'
+
 
 export default (
-  <BrowserRouter>
-    <div>
-      <Route exact path="/" component={Page_1} />
-      <Route exact path="/2" component={Page_2} />
-    </div>
-  </BrowserRouter>
+  <Provider store={mastermind.store}>
+    <BrowserRouter>
+      <div>
+        <TopNav />
+        <Route exact path="/login" component={LoginPage} />
+        <PrivateRoute exact path="/" Component={HomePage} />
+      </div>
+    </BrowserRouter>
+  </Provider>
 )
