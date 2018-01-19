@@ -15,8 +15,8 @@ class TopNav extends Component {
     return (
       <nav className="top-nav">
         <button
-        className="ui button"
-        onClick={mastermind.update.bind(this, 'localLogout')}
+          className="ui button"
+          onClick={mastermind.update.bind(this, 'localLogout')}
         > Logout </button>
       </nav>
     )

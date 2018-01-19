@@ -19,18 +19,18 @@ class LoginPage extends Component {
           <div className="field">
             <div className="ui left icon input">
               <input
-                    ref="email-input"
-                    type="email"
-                    placeholder="email..."/>
+                ref="email-input"
+                type="email"
+                placeholder="email..."/>
               <i className="mail outline icon" />
             </div>
             </div>
             <div className="field">
               <div className="ui left icon input">
                 <input
-                    ref="password-input"
-                    type="password"
-                    placeholder="password..."/>
+                  ref="password-input"
+                  type="password"
+                  placeholder="password..."/>
                 <i className="lock icon" />
               </div>
             </div>

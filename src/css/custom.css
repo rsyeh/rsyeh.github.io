@@ -12,13 +12,6 @@
   margin: auto;
 }
 
-/* Grid */
-
-
-
-/* Flex Helpers */
-
-
 /* Top Nav */
 .top-nav {
   position: fixed;
@@ -36,15 +29,8 @@
 }
 
 .login-form {
-  max-width: 400px !important;
+  max-width: 420px !important;
   margin: auto;
-}
-
-/* Overrides */
-.ui.basic.segment,
-.ui.segment.pushable {
-  padding: 0 !important;
-  min-height: 100vh;
 }
 
 .placeholder-page-label {
