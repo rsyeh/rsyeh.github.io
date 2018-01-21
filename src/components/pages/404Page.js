@@ -4,13 +4,13 @@ import React, { Component } from 'react'
 import mastermind from './../../mastermind'
 
 
-export default class HomePage extends Component {
+export default class PageNotFound extends Component {
 
   render() {
 
     return (
       <div>
-        <h1 className="placeholder-page-label"> Home Page </h1>
+        <h1 className="placeholder-page-label"> 404 Page </h1>
       </div>
     )
   }
