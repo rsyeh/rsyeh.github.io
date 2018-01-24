@@ -2,7 +2,6 @@
 
 import React, { Component } from 'react'
 import mastermind from './../../mastermind'
-import { connect } from 'react-redux'
 
 class TopNav extends Component {
 
@@ -29,4 +28,5 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(TopNav)
+
+export default mastermind.connectStore(TopNav, ['auth'])
