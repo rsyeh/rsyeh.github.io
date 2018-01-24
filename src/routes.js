@@ -15,8 +15,8 @@ export default (
           <TopNav />
           <Switch>
             <Route exact path="/login" component={LoginPage} />
-            <PrivateRoute exact path="/" Component={HomePage} />
-            <PrivateRoute Component={PageNotFound} />
+            <PrivateRoute exact path="/" component={HomePage} />
+            <PrivateRoute component={PageNotFound} />
           </Switch>
         </div>
       </Provider>
