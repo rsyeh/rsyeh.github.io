@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom'
 import registerServiceWorker from './registerServiceWorker'
 import routes from './routes'
 import './index.css'
-import './css/custom.css'
 
 const rootElement = document.getElementById('root')
 

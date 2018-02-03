@@ -1,19 +1,18 @@
 import React,{ Component } from 'react';
-import { Provider, connect } from 'react-redux'
 import { Redirect, Route } from 'react-router-dom'
-
+import mastermind from './../../mastermind'
 
 class PrivateRoute extends Component {
 
   render() {
 
-    const { auth, path } = this.props
+    const { appState, path } = this.props
 
     return(
       <div>
         <Route
           path={path || "*"}
-          render={ () => auth.user
+          render={ () => appState.auth.user
             ? <this.props.component />
             : <Redirect to={{ pathname: '/login' }} />
           }
@@ -29,4 +28,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(PrivateRoute)
+export default mastermind.connectStore(PrivateRoute, ['appState'])
