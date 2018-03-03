@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import mastermind from './../../mastermind'
 
-class LoginPage extends Component {
+class Login extends Component {
 
   componentWillMount() {
     // const user = mastermind.branch('auth').user
@@ -14,7 +14,7 @@ class LoginPage extends Component {
 
   render() {
     return(
-      <div className="login-page">
+      <div className="login-page" style={{ height: '300vh'}}>
         <form className="ui form login-form">
           <div className="field">
             <div className="ui left icon input">
@@ -62,4 +62,4 @@ class LoginPage extends Component {
   }
 }
 
-export default withRouter(LoginPage)
+export default withRouter(Login)
