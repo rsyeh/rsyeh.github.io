@@ -5,9 +5,15 @@
 
 # testing
 /coverage
+/test/unit/utilities
 
 # production
 /build
+
+#compiled
+/src/index.css
+/src/index.min.css
+
 
 # misc
 .DS_Store
