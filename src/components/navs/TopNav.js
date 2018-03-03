@@ -6,10 +6,11 @@ import mastermind from './../../mastermind'
 class TopNav extends Component {
 
   render() {
+    
     const { auth } = this.props
 
     // if there is no user (i.e. no one is logged in), do not render top nav
-    if (!auth.user) return (<div></div>)
+    if (!auth.user) return null
 
     return (
       <nav className="top-nav">
@@ -19,12 +20,6 @@ class TopNav extends Component {
         > Logout </button>
       </nav>
     )
-  }
-}
-
-const mapStateToProps = state => {
-  return {
-    auth: state.auth.toJS()
   }
 }
 
