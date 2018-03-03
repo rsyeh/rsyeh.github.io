@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "node-uuid": "^1.4.8",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
@@ -14,12 +15,20 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "tape ./test/index.js | tap-spec",
+    "build:utilities": "babel ./src/utilities -d ./test/unit/utilities",
+    "test:unit": "npm run build:utilities && tape ./test/unit/index.js | tap-spec",
+    "test:e2e:chrome": "./node_modules/nightwatch/bin/nightwatch --config ./test/e2e/nightwatch.chrome.json",
+    "test:e2e:firefox": "./node_modules/nightwatch/bin/nightwatch --config ./test/e2e/nightwatch.firefox.json ",
     "eject": "react-scripts eject",
     "flow": "flow"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
     "flow-bin": "^0.61.0",
+    "nightwatch": "^0.9.19",
     "tap-spec": "^4.1.1",
     "tape": "^4.8.0"
   }
