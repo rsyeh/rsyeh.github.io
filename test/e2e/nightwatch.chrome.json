@@ -1,0 +1,33 @@
+{
+  "src_folders" : ["test"],
+  "output_folder" : "reports",
+
+  "selenium" : {
+    "start_process" : true,
+    "server_path" : "./test/e2e/bin/selenium-server-standalone-3.9.1.jar",
+    "log_path" : "./test/e2e/log",
+    "port" : 4444,
+    "cli_args" : {
+      "webdriver.chrome.driver" : "./test/e2e/bin/chromedriver",
+    }
+  },
+
+  "test_settings" : {
+
+    "default" : {
+      "launch_url" : "http://localhost",
+      "selenium_port"  : 4444,
+      "selenium_host"  : "localhost",
+      "slient": true,
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true,
+        "chromeOptions" : {
+          "args" : ["start-fullscreen"]
+        }
+      }
+    },
+
+  }
+}
