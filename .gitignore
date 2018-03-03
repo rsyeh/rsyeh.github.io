@@ -6,6 +6,8 @@
 # testing
 /coverage
 /test/unit/utilities
+selenium-debug.log
+/reports
 
 # production
 /build
