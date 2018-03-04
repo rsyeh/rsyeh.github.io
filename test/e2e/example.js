@@ -1,6 +1,5 @@
 module.exports = {
   'Example' : function (client) {
-    console.log(client.url)
     client
       .url('http://google.com')
       .waitForElementVisible('body', 1000)

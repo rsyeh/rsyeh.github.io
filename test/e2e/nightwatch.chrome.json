@@ -8,12 +8,10 @@
     "log_path" : "./test/e2e/log",
     "port" : 4444,
     "cli_args" : {
-      "webdriver.chrome.driver" : "./test/e2e/bin/chromedriver",
+      "webdriver.chrome.driver" : "./test/e2e/bin/chromedriver"
     }
   },
-
   "test_settings" : {
-
     "default" : {
       "launch_url" : "http://localhost",
       "selenium_port"  : 4444,
@@ -27,7 +25,6 @@
           "args" : ["start-fullscreen"]
         }
       }
-    },
-
+    }
   }
 }
