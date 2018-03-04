@@ -1,7 +1,7 @@
 import screenWidthBreakpoints from './screenWidthBreakpoints'
 import mastermind from './../mastermind'
 
-
+// helper function to determine the breakpoint associated with the current screenwidth
 function determineCurrentScreenWidthBreakpoint () {
 
   const screenWidth = window.innerWidth
@@ -24,7 +24,7 @@ function determineCurrentScreenWidthBreakpoint () {
 
 }
 
-
+// function that calculates the current breakpoint and updates the store if necessary 
 export default () => {
 
   let lastScreenWidthBreakPoint = determineCurrentScreenWidthBreakpoint()
