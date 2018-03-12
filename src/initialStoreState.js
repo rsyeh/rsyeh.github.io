@@ -11,6 +11,10 @@ export default {
       lastDirectionScrolled: undefined,
     },
     modals: {},
-    navigation: {},
+    navigation: {
+      mobileMenuIsOpen: false,
+      topNavIsMounted: false,
+      topNavIsHidden: undefined,
+    },
   }
 }
