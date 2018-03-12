@@ -1,0 +1,13 @@
+* { box-sizing: border-box; }
+
+div { border: 1px solid #EF5350 !important; }
+
+h1, h2, h3, h4, h5, h6, p, label { border: 1px solid #66BB6A !important; }
+
+img, svg, canvas { border: 1px solid #7E57C2 !important; }
+
+table, thead, tbody, th, tr, td { border: 1px solid #03A9F4 !important; }
+
+nav, footer, section, article { border: 1px solid #1E88E5 !important; }
+
+form, button, input { border: 1px solid #FFC107 !important; }
