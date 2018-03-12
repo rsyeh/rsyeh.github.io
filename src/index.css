@@ -1661,8 +1661,8 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
   transition: 0.1s transform linear;
   transition: 0.1s transform linear, 0.1s -webkit-transform linear;
   position: absolute;
-  top: 12;
-  right: 12;
+  top: 12px;
+  right: 12px;
   background: 0;
   margin: 2rem;
   height: 2.7rem;
@@ -1671,6 +1671,12 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
   outline: 0;
   padding: 0;
   border: 0;
+}
+
+@media (min-width: 768px) {
+  .button--hamburger-menu-toggle {
+    display: none;
+  }
 }
 
 .bar,
@@ -1755,6 +1761,12 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
   opacity: 1;
   -webkit-transition: z-index 0.3s ease-out, opacity 0.3s;
   transition: z-index 0.3s ease-out, opacity 0.3s;
+}
+
+@media (min-width: 768px) {
+  .nav-menu--mobile {
+    display: none;
+  }
 }
 
 .nav-menu--mobile.closed {

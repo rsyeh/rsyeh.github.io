@@ -21,8 +21,8 @@ class TopNav extends Component {
           <div style={{ margin: 'auto 0 auto 12px'}}> HOME </div>
         </div>
         <div className="top-nav-section--right">
-          <HamburgerMenuToggleButton />
         </div>
+        <HamburgerMenuToggleButton />
       </nav>
     )
   }

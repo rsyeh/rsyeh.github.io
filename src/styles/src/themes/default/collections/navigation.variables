@@ -22,8 +22,8 @@
 
 @hamburgerButtonWidth                  :   3.8rem;
 @hamburgerButtonVerticalBarDistance    :   1rem;
-@hamburgerButtonDistanceFromTop        :   12;
-@hamburgerButtonDistanceFromRight      :   12;
+@hamburgerButtonDistanceFromTop        :   12px;
+@hamburgerButtonDistanceFromRight      :   12px;
 @hamburgerButtonActiveColor            :   white;
 @hamburgerButtonBarThickness           :   0.3rem;
 
