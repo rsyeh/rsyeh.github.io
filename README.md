@@ -20,6 +20,7 @@ All features can be broken down into
 - semantic-ui-react
 - sweetalert
 - fuse.js
+- react-markdown
 
 
 
