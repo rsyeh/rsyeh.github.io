@@ -1,4 +1,4 @@
-import React,{ Component } from 'react';
+import React,{ Component } from 'react'
 import { Redirect, Route } from 'react-router-dom'
 import mastermind from './../../mastermind'
 
@@ -13,7 +13,7 @@ class PrivateRoute extends Component {
       <div>
         <Route
           path={path || "*"}
-          render={ () => auth.user
+          render={ () => auth.user && Object.keys(auth.user).length > 0
             ? <this.props.component />
             : <Redirect to={{ pathname: redirectPath || '/login' }} />
           }
