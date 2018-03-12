@@ -25,7 +25,7 @@
       Global Layout
 --------------------*/
 
-@topNavHeight     : 80px;
+@topNavHeight     : 60px;
 
 
 /*-------------------

@@ -1612,13 +1612,17 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
   top: 0;
   left: 0;
   right: 0;
-  height: 80px;
+  height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   background: white;
   -webkit-transition: 0.3 all;
   transition: 0.3 all;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .nav-menu--top:shadow {
@@ -1627,28 +1631,62 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 }
 
 .nav-menu--top:hidden {
-  top: -calc(92px);
+  top: -calc(72px);
 }
 
 .top-nav-section--left {
-  width: 30%;
+  width: 50%;
+  z-index: 1000;
+  background: white;
+}
+
+.top-nav-section--left .logo--top-nav-left {
+  margin: 12px;
+  width: 80px;
 }
 
 .top-nav-section--right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 70%;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
+  width: 50%;
+  z-index: 1000;
+  background: white;
 }
 
 @media (max-width: 768px) {
   .top-nav-section--right {
     display: none;
   }
+}
+
+.top-nav-section--right .top-nav-item {
+  padding-top: 12px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.sub-nav {
+  position: absolute;
+  height: 48px;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  -webkit-transition: 0.3s top;
+  transition: 0.3s top;
+  top: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+  .sub-nav {
+    display: none;
+  }
+}
+
+.sub-nav.open {
+  top: 60px;
 }
 
 /*******************************
@@ -1661,12 +1699,12 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
   transition: 0.1s transform linear;
   transition: 0.1s transform linear, 0.1s -webkit-transform linear;
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: -18px;
+  right: -6px;
   background: 0;
   margin: 2rem;
   height: 2.7rem;
-  width: 3.8rem;
+  width: 2.4rem;
   z-index: 1001;
   outline: 0;
   padding: 0;
@@ -1702,11 +1740,11 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 }
 
 .bar::before {
-  top: -1rem;
+  top: -0.7rem;
 }
 
 .bar::after {
-  top: 1rem;
+  top: 0.7rem;
 }
 
 .bar::before,
@@ -1807,7 +1845,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 ---------------------*/
 
 .wrapper--page {
-  padding-top: calc(92px);
+  padding-top: calc(72px);
 }
 /*******************************
             Theme

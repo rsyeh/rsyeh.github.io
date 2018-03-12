@@ -1,37 +1,51 @@
-// @flow
-
 import React, { Component } from 'react'
 import mastermind from './../../mastermind'
 import HamburgerMenuToggleButton from './HamburgerMenuToggleButton'
+import { navigationContent } from './../../content'
+import { topNavSectionLeft, topNavSectionRight, topSubNav } from './../../snippets/navigation'
+
 
 class TopNav extends Component {
 
+  showSubMenu = (menuOptionsName) => {
+    mastermind.update('updateNavigationState', {
+      topSubNavMenuOptions: menuOptionsName.toLowerCase()
+    })
+  }
+
+  hideSubMenu = () => {
+    mastermind.update('updateNavigationState', { topSubNavMenuOptions: undefined })
+  }
+
   render() {
 
-    const { auth } = this.props
+    const { auth, appState } = this.props
 
     // if there is no user (i.e. no one is logged in), do not render top nav
     if (!auth.user) return null
 
-    console.log('props', this.props)
+    const { topSubNavMenuOptions } = appState.navigation
 
     return (
-      <nav className="nav-menu--top">
-        <div className="top-nav-section--left" style={{ display: 'flex' }}>
-          <div style={{ margin: 'auto 0 auto 12px'}}> HOME </div>
-        </div>
-        <div className="top-nav-section--right">
-        </div>
+      <nav
+        onMouseLeave={this.hideSubMenu.bind(this)}
+        className="nav-menu--top">
+
+        {/* Left */}
+        { topNavSectionLeft(navigationContent) }
+
+        {/* Right */}
+        { topNavSectionRight(navigationContent, this) }
+
+        {/* Hamburger Button */}
         <HamburgerMenuToggleButton />
+
+        {/* Sub Nav */}
+        { topSubNav(navigationContent, this) }
       </nav>
     )
   }
 }
 
 
-export default mastermind.connectStore(TopNav, ['auth', 'test:example'])
-
-// <button
-//   className="ui button"
-//   onClick={mastermind.update.bind(this, 'localLogout')}
-// > Logout </button>
+export default mastermind.connectStore(TopNav, ['auth', 'appState'])

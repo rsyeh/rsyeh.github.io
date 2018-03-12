@@ -19,8 +19,10 @@
   right: 0;
   height: @topNavHeight;
   display: flex;
+  justify-content: space-between;
   background: @topNavBgColor;
   transition: 0.3 all;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
 
   &:shadow {
     box-shadow: @topNavBoxShadow;
@@ -33,18 +35,54 @@
 }
 
 .top-nav-section--left {
-  width: 30%;
+  width: 50%;
+  z-index: 1000;
+  background: @topNavBgColor;
+
+  .logo--top-nav-left {
+    margin: 12px;
+    width: 80px;
+  }
 }
 
 .top-nav-section--right {
   display: flex;
-  width: 70%;
-  flex-direction: row-reverse;
+  width: 50%;
+  z-index: 1000;
+  background: @topNavBgColor;
+
   @media (max-width: @tabletBreakpoint) {
     display: none;
   }
+
+  .top-nav-item {
+    padding-top: 12px;
+    flex: 1;
+  }
 }
 
+.sub-nav {
+  position: absolute;
+  height: 48px;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  transition: 0.3s top;
+  top: 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+
+  @media (max-width: @tabletBreakpoint) {
+    display: none;
+  }
+
+  .sub-nav-item {
+
+  }
+
+  &.open {
+    top: @topNavHeight;
+  }
+}
 
 /*******************************
   Mobile Hamburger Menu Button
@@ -135,7 +173,7 @@
   @media (min-width: @tabletBreakpoint) {
     display: none;
   }
-  
+
   z-index: 1000;
   position: fixed;
   top: 0;
