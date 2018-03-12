@@ -1,8 +1,13 @@
 import mastermind from './mastermind'
-import { trackScreenWidthBreakpoint, trackScrollDirection, trackScrollLocation } from './utilities'
+import activateSocketActivity from './activateSocketActivity'
+import {
+  trackScreenWidthBreakpoint,
+  trackScrollDirection,
+  trackScrollLocation,
+} from './utilities'
 
 export default () => {
-  
+
   console.log('RUNNING INIT')
 
   trackScreenWidthBreakpoint()
@@ -10,5 +15,7 @@ export default () => {
   trackScrollDirection()
 
   trackScrollLocation()
+
+  // activateSocketActivity()
 
 }
