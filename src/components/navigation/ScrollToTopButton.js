@@ -11,7 +11,7 @@ class ScrollToTopButton extends Component {
     const { appState } = this.props
 
     // if there is no user (i.e. no one is logged in), do not render top nav
-    if (false) return null
+    if (true) return null
 
     return (
       <button

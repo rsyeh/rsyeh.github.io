@@ -1,0 +1,24 @@
+/*******************************
+             Breakpoints
+*******************************/
+
+/* Inherited From Site */
+
+// @mobileBreakpoint
+// @tabletBreakpoint
+// @computerBreakpoint
+// @largeMonitorBreakpoint
+// @widescreenMonitorBreakpoint
+
+// @mobileBreakpointColSuffix
+// @tabletBreakpointColSuffix
+// @computerBreakpointColSuffix
+// @largeMonitorBreakpointColSuffix
+// @widescreenMonitorBreakpointColSuffix
+
+
+/*******************************
+      Gutter
+*******************************/
+
+@colGutterSize: 4px;
