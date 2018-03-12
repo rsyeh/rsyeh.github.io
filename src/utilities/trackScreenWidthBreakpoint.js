@@ -6,25 +6,25 @@ function determineCurrentScreenWidthBreakpoint () {
 
   const screenWidth = window.innerWidth
 
-  let breakpointName
+  let determinedBreakpoint
 
   screenWidthBreakpoints.forEach(breakpoint => {
 
     const { name, minWidth, maxWidth } = breakpoint
 
-    if (screenWidth > minWidth && screenWidth < maxWidth ) {
+    if (screenWidth >= minWidth && screenWidth < maxWidth ) {
 
-      breakpointName = name
+      determinedBreakpoint = breakpoint
 
     }
 
   })
 
-  return breakpointName
+  return determinedBreakpoint
 
 }
 
-// function that calculates the current breakpoint and updates the store if necessary 
+// function that calculates the current breakpoint and updates the store if necessary
 export default () => {
 
   let lastScreenWidthBreakPoint = determineCurrentScreenWidthBreakpoint()
