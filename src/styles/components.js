@@ -5,7 +5,7 @@ module.exports = [
   "site",
 
   /* Elements */
-  // "button",
+  "button",
   // "container",
   // "divider",
   // "flag",
