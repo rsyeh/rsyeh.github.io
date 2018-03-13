@@ -9,7 +9,7 @@
 
 
 /*******************************
-            Top Nav
+            Top Nav MAIN
 *******************************/
 
 .nav-menu--top {
@@ -58,6 +58,11 @@
   .top-nav-item {
     padding-top: 12px;
     flex: 1;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba(0,0,0,0.08);
+    }
   }
 }
 
@@ -70,17 +75,49 @@
   transition: 0.3s top;
   top: 0;
   border-bottom: 1px solid rgba(0,0,0,0.08);
+  margin: auto;
+
+  .icon-button--close-to-sub-nav {
+    position: absolute;
+    right: 12px;
+    cursor: pointer;
+  }
+
+  .sub-nav-item {
+    cursor: pointer;
+    // flex: 1;
+    padding: 0 12px;
+    &:hover {
+      background: rgba(0,0,0,0.08);
+    }
+
+  }
 
   @media (max-width: @tabletBreakpoint) {
     display: none;
   }
 
-  .sub-nav-item {
-
-  }
-
   &.open {
     top: @topNavHeight;
+  }
+}
+
+/*******************************
+        Top Nav LANDING
+*******************************/
+
+.top-nav--landing {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: @topNavHeight;
+  background: 0;
+  display: flex;
+
+  .top-nav-section--left,
+  .top-nav-section--right {
+    background: inherit;
   }
 }
 

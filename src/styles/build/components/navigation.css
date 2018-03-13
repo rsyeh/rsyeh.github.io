@@ -7,7 +7,7 @@
 
 
 /*******************************
-            Top Nav
+            Top Nav MAIN
 *******************************/
 
 .nav-menu--top {
@@ -61,6 +61,10 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  cursor: pointer;
+}
+.top-nav-section--right .top-nav-item:hover {
+  background: rgba(0, 0, 0, 0.08);
 }
 .sub-nav {
   position: absolute;
@@ -72,6 +76,19 @@
   transition: 0.3s top;
   top: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  margin: auto;
+}
+.sub-nav .icon-button--close-to-sub-nav {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+}
+.sub-nav .sub-nav-item {
+  cursor: pointer;
+  padding: 0 12px;
+}
+.sub-nav .sub-nav-item:hover {
+  background: rgba(0, 0, 0, 0.08);
 }
 @media (max-width: 768px) {
   .sub-nav {
@@ -80,6 +97,27 @@
 }
 .sub-nav.open {
   top: 60px;
+}
+
+
+/*******************************
+        Top Nav LANDING
+*******************************/
+
+.top-nav--landing {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.top-nav--landing .top-nav-section--left,
+.top-nav--landing .top-nav-section--right {
+  background: inherit;
 }
 
 

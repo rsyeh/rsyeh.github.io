@@ -15,7 +15,7 @@ class PrivateRoute extends Component {
           path={path || "*"}
           render={ () => auth.user && Object.keys(auth.user).length > 0
             ? <this.props.component />
-            : <Redirect to={{ pathname: redirectPath || '/login' }} />
+            : <Redirect to={{ pathname: redirectPath || '/' }} />
           }
         />
       </div>

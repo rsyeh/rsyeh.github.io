@@ -1,7 +1,7 @@
 
 import React,{ Component } from 'react';
 import { BrowserRouter, Link, Route, Switch } from 'react-router-dom'
-import { AdminPage, LoginPage, HomePage, PageNotFound } from './components/pages'
+import { AdminPage, LandingPage, DashboardPage, PageNotFound } from './components/pages'
 import { TopNav, MobileMenu, HamburgerMenuToggleButton, ScrollToTopButton } from './components/navigation'
 import mastermind from './mastermind'
 import { Provider } from 'react-redux'
@@ -16,8 +16,8 @@ export default (
           <MobileMenu />
           <ScrollToTopButton />
           <Switch>
-            <Route exact path="/login" component={LoginPage} />
-            <PrivateRoute exact path="/" component={HomePage} />
+            <Route exact path="/" component={LandingPage} />
+            <PrivateRoute exact path="/dashboard" component={DashboardPage} />
             <PrivateRoute exact path="/admin" component={AdminPage} />
             <PrivateRoute component={PageNotFound} />
           </Switch>
