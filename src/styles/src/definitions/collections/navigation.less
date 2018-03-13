@@ -9,7 +9,7 @@
 
 
 /*******************************
-            Top Nav
+            Top Nav MAIN
 *******************************/
 
 .nav-menu--top {
@@ -19,8 +19,10 @@
   right: 0;
   height: @topNavHeight;
   display: flex;
+  justify-content: space-between;
   background: @topNavBgColor;
   transition: 0.3 all;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
 
   &:shadow {
     box-shadow: @topNavBoxShadow;
@@ -33,18 +35,91 @@
 }
 
 .top-nav-section--left {
-  width: 30%;
+  width: 50%;
+  z-index: 1000;
+  background: @topNavBgColor;
+
+  .logo--top-nav-left {
+    margin: 12px;
+    width: 80px;
+  }
 }
 
 .top-nav-section--right {
   display: flex;
-  width: 70%;
-  flex-direction: row-reverse;
+  width: 50%;
+  z-index: 1000;
+  background: @topNavBgColor;
+
   @media (max-width: @tabletBreakpoint) {
     display: none;
   }
+
+  .top-nav-item {
+    padding-top: 12px;
+    flex: 1;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba(0,0,0,0.08);
+    }
+  }
 }
 
+.sub-nav {
+  position: absolute;
+  height: 48px;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  transition: 0.3s top;
+  top: 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  margin: auto;
+
+  .icon-button--close-to-sub-nav {
+    position: absolute;
+    right: 12px;
+    cursor: pointer;
+  }
+
+  .sub-nav-item {
+    cursor: pointer;
+    // flex: 1;
+    padding: 0 12px;
+    &:hover {
+      background: rgba(0,0,0,0.08);
+    }
+
+  }
+
+  @media (max-width: @tabletBreakpoint) {
+    display: none;
+  }
+
+  &.open {
+    top: @topNavHeight;
+  }
+}
+
+/*******************************
+        Top Nav LANDING
+*******************************/
+
+.top-nav--landing {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: @topNavHeight;
+  background: 0;
+  display: flex;
+
+  .top-nav-section--left,
+  .top-nav-section--right {
+    background: inherit;
+  }
+}
 
 /*******************************
   Mobile Hamburger Menu Button
@@ -52,6 +127,11 @@
 
 // TODO: extract to variables
 .button--hamburger-menu-toggle {
+
+  @media (min-width: @tabletBreakpoint) {
+    display: none;
+  }
+
   -webkit-transition: 0.1s -webkit-transform linear;
   transition: 0.1s -webkit-transform linear;
   transition: 0.1s transform linear;
@@ -126,6 +206,11 @@
 *******************************/
 
 .nav-menu--mobile {
+
+  @media (min-width: @tabletBreakpoint) {
+    display: none;
+  }
+
   z-index: 1000;
   position: fixed;
   top: 0;

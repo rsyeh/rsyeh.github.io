@@ -17,12 +17,39 @@
         Standard
 ---------------------*/
 
-.wrapper--page {
+.wrapper--page-with-top-nav {
   padding-top: calc(@topNavHeight + 12px); // maybe extra extra padding to variable
 
 
   .container--page-content {
 
 
+  }
+}
+
+
+/*******************************
+          Landing Page
+*******************************/
+
+.section--landing-page--intro {
+  color: white;
+  background-image: url('/blue-gradient-bg.png');
+  min-height: 840px;
+  max-height: 960px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+
+  .section-bg-container {
+    background: tomato;
+    position: absolute;
+    top: 0;
+    right: -10%;
+    bottom: 0;
+    left: -10%;
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    z-index: 2;
   }
 }

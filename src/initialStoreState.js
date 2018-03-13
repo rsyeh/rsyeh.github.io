@@ -15,6 +15,8 @@ export default {
       mobileMenuIsOpen: false,
       topNavIsMounted: false,
       topNavIsHidden: undefined,
+      topSubNavMenuOptions: undefined,
+      currentLocation: undefined
     },
   }
 }

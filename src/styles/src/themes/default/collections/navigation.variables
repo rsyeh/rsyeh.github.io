@@ -4,7 +4,6 @@
 
 /* Inherited From Site */
 
-
 // @topNavHeight
 
 
@@ -20,10 +19,10 @@
   Mobile Hamburger Menu Button
 *******************************/
 
-@hamburgerButtonWidth                  :   3.8rem;
-@hamburgerButtonVerticalBarDistance    :   1rem;
-@hamburgerButtonDistanceFromTop        :   12;
-@hamburgerButtonDistanceFromRight      :   12;
+@hamburgerButtonWidth                  :   2.4rem;
+@hamburgerButtonVerticalBarDistance    :   0.7rem;
+@hamburgerButtonDistanceFromTop        :   -18px;
+@hamburgerButtonDistanceFromRight      :   -6px;
 @hamburgerButtonActiveColor            :   white;
 @hamburgerButtonBarThickness           :   0.3rem;
 
