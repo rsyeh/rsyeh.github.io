@@ -1,6 +1,6 @@
 ## How to design and implement features
 
-All features can be broken down into
+All test can be broken down into
 
 - components - containers connected to the store, or needing to use component life-cycle methods or refs (pages, forms, modals, routes, navigation, and other shared components)
 - snippets - functions that return JSX (sections, cards, buttons)
