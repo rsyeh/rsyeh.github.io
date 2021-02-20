@@ -2,7 +2,7 @@ export default {
   introSection: {
     callToActionButtons: [
       {
-        buttonText: 'I Need Talent',
+        buttonText: 'I AM Talent',
         buttonLinkHref: '/',
         subButtonText: 'Get Work Done - Learn More',
         buttonColor: 'blue',
@@ -14,6 +14,6 @@ export default {
         buttonColor: 'pink',
       },
     ],
-    
+
   }
 }
