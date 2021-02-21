@@ -5,19 +5,84 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #FFFCEF;
 }
+img {
+  max-width:100%;
+}
+h1 {
+  font-weight: normal;
+  font-size: 3em;
+  margin-block-end: .25em;
+}
+
 .container {
   display: flex;
+  height: 100%;
 }
+.heading-bucket-left {
+  margin: 20px;
+  flex: 1;
+}
+.heading-bucket-right {
+  margin: 20px;
+  flex: 2;
+}
+.content-container {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  background-color: #FFF;
+  border: 1px solid #000;
+}
+.pic-container {}
+.text-component {}
+.links-component {}
+
 </style>
 </head>
 <body>
 <div class="container">
-<h1>Ryan Yeh</h1>
+  <div class="heading-bucket-left">
+    <h1>Ryan Yeh</h1>
+    <hr size="2px" width="100%" color="#000"/>
+    <!-- <hr size="2px" width="100%" color="#000"/> -->
+    <div class="content-container">
+      <span class="text-component">
+        <p>
+          I am an independent, curious technical mind.
+        </p>
+        <p>
+          I quickly learn and apply new ideas and concepts.
+        </p>
+        <p>
+          No matter my role, I utilize my experience as a...
+        </p>
+        <p>
+          team leader,
+        </p>
+        <p>
+          business analyst,
+        </p>
+        <p>
+          application developer
+        </p>
+        <p>
+          because that is what defines me as a professional.
+        </p>
+      </span>
+      <span class="links-component">
+        <a href="https://www.linkedin.com/in/ryan-yeh-34b8478a">LinkedIn</a>
+      </span>
+    </div>
+  </div>
+  <div class="heading-bucket-right">
+    <div class="pic-container">
+      <img src="public/myPic.png" alt="myPicture" />
+    </div>
+  </div>
 </div>
-<p>A website created by me.</p>
 
 </body>
 </html>
