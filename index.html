@@ -14,8 +14,8 @@ img {
   max-width:100%;
 }
 h1 {
-  font-weight: normal;
-  font-size: 3em;
+  font-weight: lighter;
+  font-size: 3.5em;
   margin-block-end: .25em;
 }
 
@@ -26,6 +26,8 @@ h1 {
 .heading-bucket-left {
   margin: 20px;
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 .heading-bucket-right {
   margin: 20px;
@@ -35,21 +37,38 @@ h1 {
   padding: 0.5rem 1rem 0.5rem 1rem;
   background-color: #FFF;
   border: 1px solid #000;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .pic-container {}
-.text-component {}
-.links-component {}
+.text-component p:first-child {
+  margin-block-start: 0.5em;
+}
+.links-component {
+  display: flex;
+  flex-direction: column;
+}
+.links-bar {
+  display: flex;
+  justify-content: space-around;
+}
+.links-bar .link-wrapper {
+   width: 25%;
+}
 
 </style>
 </head>
 <body>
 <div class="container">
   <div class="heading-bucket-left">
-    <h1>Ryan Yeh</h1>
-    <hr size="2px" width="100%" color="#000"/>
-    <!-- <hr size="2px" width="100%" color="#000"/> -->
+    <span class="header-wrapper">
+      <h1>Ryan Yeh</h1>
+      <hr size="2px" width="100%" color="#000"/>
+    </span>
     <div class="content-container">
-      <span class="text-component">
+      <div class="text-component">
         <p>
           I am an independent, curious technical mind.
         </p>
@@ -71,10 +90,22 @@ h1 {
         <p>
           because that is what defines me as a professional.
         </p>
-      </span>
-      <span class="links-component">
-        <a href="https://www.linkedin.com/in/ryan-yeh-34b8478a">LinkedIn</a>
-      </span>
+      </div>
+      <div class="links-component">
+        <hr size="1px" width="100%" color="#000" />
+        <span class="links-bar">
+          <span class="link-wrapper">
+            <a href="https://www.linkedin.com/in/ryan-yeh-34b8478a" target="_blank" rel="noopener noreferrer">
+              <img src="public/linkedin-button.png" alt="linkedinIcon" />
+            </a>
+          </span>
+          <span class="link-wrapper">
+            <a href="https://github.com/bigboiyeh" target="_blank" rel="noopener noreferrer">
+              <img src="public/github-icon.png" alt="githubIcon" />
+            </a>
+        </span>
+        </span>
+      </div>
     </div>
   </div>
   <div class="heading-bucket-right">
