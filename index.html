@@ -15,7 +15,7 @@ img {
 }
 h1 {
   font-weight: lighter;
-  font-size: 3.5em;
+  font-size: 5.5vw;
   margin-block-end: .25em;
 }
 
@@ -23,15 +23,16 @@ h1 {
   display: flex;
   height: 100%;
 }
-.heading-bucket-left {
+.heading-bucket-text {
   margin: 20px;
   flex: 1;
   display: flex;
   flex-direction: column;
 }
-.heading-bucket-right {
+.heading-bucket-pic {
   margin: 20px;
   flex: 2;
+  display: flex;
 }
 .content-container {
   padding: 0.5rem 1rem 0.5rem 1rem;
@@ -45,6 +46,10 @@ h1 {
 .pic-container {}
 .text-component p:first-child {
   margin-block-start: 0.5em;
+
+}
+.text-component p {
+  font-size: 1.5vw;
 }
 .links-component {
   display: flex;
@@ -58,11 +63,29 @@ h1 {
    width: 25%;
 }
 
+/* For tablet and phone */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 4em;
+    text-align: center;
+  }
+  .content-container .text-component p {
+    font-size: 1em;
+    text-align: center;
+  }
+  .links-component .links-bar .link-wrapper {
+     width: 15%;
+  }
+}
+
 </style>
 </head>
 <body>
 <div class="container">
-  <div class="heading-bucket-left">
+  <div class="heading-bucket-text">
     <span class="header-wrapper">
       <h1>Ryan Yeh</h1>
       <hr size="2px" width="100%" color="#000"/>
@@ -108,7 +131,7 @@ h1 {
       </div>
     </div>
   </div>
-  <div class="heading-bucket-right">
+  <div class="heading-bucket-pic">
     <div class="pic-container">
       <img src="public/myPic.png" alt="myPicture" />
     </div>
